@@ -46,9 +46,9 @@ weatherForm.addEventListener('submit',(e)=>{
             
             messageOne.textContent=data.location;
             
-            const { weatherdescription, currenttemp, feelslike } = data.forecast;
+            const { weatherdescription, currenttemp, feelslike, humidity } = data.forecast;
  
-            messageTwo.textContent = `${weatherdescription} It is ${currenttemp} degrees Celcius, feels like ${feelslike} .`;
+            messageTwo.textContent = `${weatherdescription} It is ${currenttemp} degrees Celcius, feels like ${feelslike} with ${humidity} % humidity .`;
             // console.log(data.forecast);
         }
     })

@@ -10,10 +10,12 @@ const forecast=(latitude,longitude,callback)=>{
             callback('Unable to get the weather',undefined)
         }
         else{
+            // console.log(body.current)
             callback(undefined,{
                 weatherdescription:body.current.weather_descriptions[0],
                 currenttemp:body.current.temperature,
                 feelslike:body.current.feelslike,
+                humidity:body.current.humidity
                 
 
             })
